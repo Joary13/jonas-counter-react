@@ -16,14 +16,14 @@ function Counter() {
   return (
     <>
       <div>
-        <button onClick={() => setStep(step - 1)}>{'-'}</button>
+        <button onClick={() => setStep((c) => c - 1)}>{'-'}</button>
         <span>Step: {step}</span>
-        <button onClick={() => setStep(step + 1)}>{'+'}</button>
+        <button onClick={() => setStep((c) => c + 1)}>{'+'}</button>
       </div>
       <div>
-        <button onClick={() => setCount(count - step)}>{'-'}</button>
+        <button onClick={() => setCount((c) => c - step)}>{'-'}</button>
         <span>Count: {count}</span>
-        <button onClick={() => setCount(count + step)}>{'+'}</button>
+        <button onClick={() => setCount((c) => c + step)}>{'+'}</button>
       </div>
       <p>
         {count === 0
